@@ -4,7 +4,7 @@ description: 'Describes how to use an Observable when lazy loading routes with t
 published: true
 slug: 2020-07-06-lazy-loading-routes-observable
 publishedDate: '2020-07-06 02:00 PM CST'
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>

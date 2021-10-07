@@ -4,7 +4,7 @@ description: 'Chatting with Luke Howell'
 published: true
 slug: 2020-06-19-angular-unfiltered-005
 publishedDate: '2020-06-19 02:00 PM CST'
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>

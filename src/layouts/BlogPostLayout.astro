@@ -1,0 +1,30 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import readingTime from 'reading-time';
+const { content } = Astro.props;
+const stats = readingTime(content.astro.source);
+---
+
+<html>
+  <head>
+    <title>{content.title}</title>
+    <link rel="stylesheet" href={Astro.resolve("../themes/prism-atom-dark.css")} />
+   
+  </head>
+
+  <body>
+    <Header />
+    <div class="w-screen max-w-4xl text-2xl p-4">
+      <h2 class="text-gray-600 text-2xl">{content.title}</h2>
+
+      <span class="font-light text-sm">
+        {content.publishedDate} - {stats.minutes} min read
+      </span>
+
+      <slot/>
+    </div>
+    <Footer />
+  </body>
+</html>

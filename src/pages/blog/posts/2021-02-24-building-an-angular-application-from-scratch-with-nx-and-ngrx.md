@@ -4,7 +4,7 @@ description: 'Running a few commands can get you started quickly when building f
 published: true
 slug: 2021-02-24-building-an-angular-application-from-scratch-with-nx-and-ngrx
 publishedDate: '2021-02-24 02:00 PM CST'
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>
@@ -19,7 +19,7 @@ Structure and patterns go a long way when building scalable applications. [Nx](h
 
 Start with creating the Nx workspace with an Angular application.
 
-```sh
+```shell
 npx create-nx-workspace@latest seinfeld --appName=quotes --preset=angular --style=css --routing
 ```
 
@@ -32,7 +32,7 @@ This command generates a new workspace, and scaffolds out a new Angular applicat
 
 To get started with NgRx, the best place is to always start with the schematics, as they handle all the initial setup for the NgRx packages.
 
-```sh
+```shell
 nx g ngrx app --root --no-interactive --project quotes --module apps/quotes-app/src/app/app.module.ts
 ```
 
@@ -53,7 +53,7 @@ Read more about these concepts in the [NgRx docs](https://ngrx.io/guide/store).
 
 Serve up the application:
 
-```sh
+```shell
 ng serve
 ```
 
@@ -67,7 +67,7 @@ Generating libraries in an Nx workspace is done by using the generate command al
 
 Generate a library for setting up data access for quotes:
 
-```sh
+```shell
 nx g lib quotes/data-access
 ```
 
@@ -75,13 +75,13 @@ A "data access" library is where functionality for fetching and storing data for
 
 Generate a library for the quotes page feature:
 
-```sh
+```shell
 nx g lib quotes/page
 ```
 
 Generate a service for fetching Seinfeld quotes:
 
-```sh
+```shell
 nx g service quotes --project quotes-data-access
 ```
 
@@ -93,7 +93,7 @@ For the quotes feature page, a component is used to list the quotes.
 
 Generate a component for the quotes page feature.
 
-```sh
+```shell
 nx g component quotes-page --project quotes-page
 ```
 
@@ -167,7 +167,7 @@ Reloading the app in the browser displays `quotes page works!`.
 
 As I mentioned before, schematics handle a lot of the wiring up of state for you. Generating state for the quotes feature can be done quickly using the `ngrx` schematic.
 
-```sh
+```shell
 nx g ngrx quotes --project quotes-data-access --no-interactive --module libs/quotes/data-access/src/lib/quotes-data-access.module.ts --barrels
 ```
 
@@ -212,7 +212,7 @@ When this feature is loaded, the `quotes` state is added to the global state, an
 
 **NgRx Tip**: To generate an empty feature state, use the feature schematic from the `@ngrx/schematics` package.
 
-```sh
+```shell
 nx g @ngrx/schematics:feature quote
 ```
 Follow the prompts to generate and set up the NgRx feature state.

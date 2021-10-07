@@ -4,7 +4,7 @@ description: 'Custom Route Matching with the Angular Router'
 published: true
 slug: 2019-03-27-custom-route-matching-angular-router
 publishedDate: 2019-03-27
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>

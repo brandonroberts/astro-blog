@@ -4,7 +4,7 @@ description: 'Chatting with Jordan Powell'
 published: true
 slug: 2020-09-11-angular-unfiltered-017
 publishedDate: '2020-09-11 02:00 PM CST'
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>

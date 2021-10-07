@@ -4,7 +4,7 @@ description: 'Handling Error States with NgRx'
 published: true
 slug: 2019-03-04-handling-error-states-with-ngrx
 publishedDate: 2019-03-04
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>

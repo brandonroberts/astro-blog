@@ -4,7 +4,7 @@ description: 'Chatting with Minko Gechev'
 published: true
 slug: 2020-10-09-angular-unfiltered-019
 publishedDate: '2020-10-09 02:00 PM CST'
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogPostLayout.astro
 ---
 
 <br/>
