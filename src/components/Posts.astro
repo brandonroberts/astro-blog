@@ -1,0 +1,23 @@
+---
+function isPost(post: any) {
+  return !post.title.includes('Unfiltered');
+}
+let allPosts = Astro.fetchContent<MarkdownFrontMatter>('../pages/blog/posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.publishedDate).valueOf() - new Date(a.publishedDate).valueOf());
+
+const posts = allPosts.filter(isPost);
+---
+
+<div class="grid grid-rows-3 gap-4 py-8 max-w-2xl text-2xl">
+  {posts.map(post => {
+    return (
+      <div class="flex flex-col h-full overflow-x-auto">
+        <a href={'/blog/posts/' + post.slug} class="text-gray-600">{post.title}</a>
+
+        <p class="text-sm">
+          {post.publishedDate}
+        </p>
+    </div>
+    );
+  })}
+</div>
