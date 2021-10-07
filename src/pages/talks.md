@@ -3,6 +3,7 @@ title: Tech Talks and Appearances
 description: 'Stuff'
 published: true
 slug: talks
+layout: ../layouts/BaseLayout.astro
 ---
 
 <div class="flex flex-col justify-around px-8 text-xl">

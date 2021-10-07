@@ -10,6 +10,7 @@ const stats = readingTime(content.astro.source);
 <html>
   <head>
     <title>{content.title}</title>
+    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
     <link rel="stylesheet" href={Astro.resolve("../themes/prism-atom-dark.css")} />
    
   </head>
