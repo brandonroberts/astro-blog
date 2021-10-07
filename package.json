@@ -1,5 +1,5 @@
 {
-  "name": "@example/starter",
+  "name": "@brandontroberts/astro-blog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
