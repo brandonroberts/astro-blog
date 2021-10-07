@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+import { format } from 'date-fns';
 import readingTime from 'reading-time';
 const { content } = Astro.props;
 const stats = readingTime(content.astro.source);
@@ -22,7 +23,7 @@ const stats = readingTime(content.astro.source);
       name="keywords"
       content="Brandon Roberts, Blog, Web Development, Angular, HTML, CSS, JavaScript, TypeScript"
     />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
       rel="stylesheet"
@@ -44,7 +45,7 @@ const stats = readingTime(content.astro.source);
           <h2 class="text-gray-600 text-2xl">{content.title}</h2>
 
           <span class="font-light text-sm">
-            {content.publishedDate} - {stats.minutes > 1 ?  Math.ceil(stats.minutes) : 1} min read
+            {format(new Date(content.publishedDate), 'MMMM dd, yyyy')} - {stats.minutes > 1 ?  Math.ceil(stats.minutes) : 1} min read
           </span>
 
           <slot/>

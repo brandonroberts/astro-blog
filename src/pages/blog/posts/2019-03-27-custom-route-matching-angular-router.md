@@ -3,7 +3,7 @@ title: Custom Route Matching with the Angular Router
 description: 'Custom Route Matching with the Angular Router'
 published: true
 slug: 2019-03-27-custom-route-matching-angular-router
-publishedDate: 2019-03-27
+publishedDate: '2019-03-27 02:00 PM CST'
 layout: ../../../layouts/BlogPostLayout.astro
 ---
 
