@@ -1,0 +1,19 @@
+{
+  "name": "@astrojs/renderer-angular",
+  "version": "0.0.1",
+  "description": "An Angular renderer for Astro",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./server.js": "./server.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "server.js"
+  ],
+  "dependencies": {
+    "@nguniversal/common": "^12.2.0",
+    "zone.js": "^0.11.4"
+  }
+}
