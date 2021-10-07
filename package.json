@@ -6,26 +6,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "copy": "rimraf ./node_modules/.cache/snowpack/build && cp -R ./renderer-angular ./node_modules/@astrojs/"
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@angular/platform-server": "^12.2.9",
-    "@nguniversal/common": "^12.1.1",
     "astro": "^0.20.9",
-    "tailwindcss": "^2.2.16"
-  },
-  "dependencies": {
-    "@angular/animations": "^12.2.9",
-    "@angular/common": "^12.2.9",
-    "@angular/compiler": "^12.2.9",
-    "@angular/core": "^12.2.9",
-    "@angular/platform-browser": "^12.2.9",
-    "@angular/platform-browser-dynamic": "^12.2.9",
+    "tailwindcss": "^2.2.16",
     "date-fns": "^2.25.0",
     "prism-themes": "^1.9.0",
-    "reading-time": "^1.5.0",
-    "rxjs": "^7.4.0",
-    "zone.js": "^0.11.4"
+    "reading-time": "^1.5.0"
   }
 }
