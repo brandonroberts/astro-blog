@@ -19,7 +19,11 @@ h2 {
   font-weight: 500;
 }
 
-app-post a {
+article a {
   @apply bg-blue-400;
   @apply underline;
+}
+
+article > h2 {
+  margin: 4px 0px 4px 0px;
 }

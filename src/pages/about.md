@@ -6,7 +6,7 @@ slug: about
 layout: ../layouts/BaseLayout.astro
 ---
 
-<div class="flex flex-col justify-around px-8 text-xl max-w-2xl">
+<div class="">
 
 <div class="text-2xl py-4">
   About Me

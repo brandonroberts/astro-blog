@@ -10,22 +10,48 @@ const stats = readingTime(content.astro.source);
 <html>
   <head>
     <title>{content.title}</title>
+    <base href="/" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Brandon Roberts - Web Developer, Angular Team Member, NgRx Core Team, Open Source Project Maintainer"
+    />
+    <meta
+      name="keywords"
+      content="Brandon Roberts, Blog, Web Development, Angular, HTML, CSS, JavaScript, TypeScript"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
-    <link rel="stylesheet" href={Astro.resolve("../themes/prism-atom-dark.css")} />
-   
+    <link rel="stylesheet" href={Astro.resolve("../themes/prism-atom-dark.css")} />    
   </head>
 
   <body>
-    <Header />
-    <div class="w-screen max-w-4xl text-2xl p-4">
-      <h2 class="text-gray-600 text-2xl">{content.title}</h2>
+    <main>
+      <Header />
 
-      <span class="font-light text-sm">
-        {content.publishedDate} - {stats.minutes} min read
-      </span>
+      <div class="flex flex-grow justify-center min-h-screen">
+        <article class="w-screen max-w-4xl p-8">
+          <h2 class="text-gray-600 text-2xl">{content.title}</h2>
 
-      <slot/>
-    </div>
-    <Footer />
+          <span class="font-light text-sm">
+            {content.publishedDate} - {stats.minutes > 1 ?  Math.ceil(stats.minutes) : 1} min read
+          </span>
+
+          <slot/>
+        </article>  
+      </div>
+      
+      <Footer />
+    </main>
   </body>
 </html>

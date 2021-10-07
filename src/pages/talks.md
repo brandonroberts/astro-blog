@@ -6,7 +6,7 @@ slug: talks
 layout: ../layouts/BaseLayout.astro
 ---
 
-<div class="flex flex-col justify-around px-8 text-xl">
+<div class="">
 
 <div class="text-2xl py-4">
   Conference talks, and podcast appearances.
