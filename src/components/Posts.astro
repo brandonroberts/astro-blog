@@ -17,7 +17,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishedDate).valueOf
 const posts = allPosts.filter(post => post.frontmatter.published && isPost(post, live));
 ---
 
-<div class="text-2xl w-4/5">
+<div class="text-2xl w-1/2">
   {posts.map(post => {
     return (
       <div class="py-4">
